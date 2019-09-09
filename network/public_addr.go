@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	publicNetworksToPrefixes = map[Network]byte{Main: 0x5A, Test: 0x6F}
+	publicNetworksToPrefixes = map[Network]byte{Main: 0x00, Test: 0x6F}
 	publicPrefixesToNetworks = inversemap.InverseMap(publicNetworksToPrefixes).(map[byte]Network)
 )
 
