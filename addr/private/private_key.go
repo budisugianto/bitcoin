@@ -4,8 +4,8 @@ import (
 	"crypto/sha256"
 	"math/big"
 
-	"github.com/steakknife/bitcoin/network"
-	"github.com/steakknife/bitcoin/util/key"
+	"github.com/budisugianto/bitcoin/network"
+	"github.com/budisugianto/bitcoin/util/key"
 	"golang.org/x/crypto/ripemd160"
 )
 

@@ -2,7 +2,7 @@ package checksum
 
 import (
 	"bytes"
-	"github.com/steakknife/bitcoin/test/hex"
+	"github.com/budisugianto/bitcoin/test/hex"
 	"testing"
 )
 

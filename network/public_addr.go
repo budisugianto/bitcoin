@@ -2,7 +2,7 @@ package network
 
 import (
 	"fmt"
-	"github.com/steakknife/bitcoin/util/inversemap"
+	"github.com/budisugianto/bitcoin/util/inversemap"
 )
 
 var (

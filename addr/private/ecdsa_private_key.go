@@ -4,7 +4,7 @@ import (
 	"crypto/elliptic"
 	"crypto/rand"
 	"fmt"
-	"github.com/steakknife/koblitz/kelliptic"
+	"github.com/budisugianto/koblitz/kelliptic"
 	"math/big"
 )
 

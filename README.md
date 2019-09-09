@@ -7,7 +7,7 @@
 #### Generate a btc private/public key pair
 
 ```go
-import btcpk "github.com/steakknife/bitcoin/addr/private"
+import btcpk "github.com/budisugianto/bitcoin/addr/private"
 
 pk := btcpk.MustGenerate()
 
@@ -17,7 +17,7 @@ fmt.Printf("BTC                  Public key address: %s", pk.PublicKey())
 
 #### Parse a btc public key address
 ```go
-import btcpub "github.com/steakknife/bitcoin/addr/public"
+import btcpub "github.com/budisugianto/bitcoin/addr/public"
 
 pubKey := btcpub.MustDecode("19Bq1gipWrLxFGqVH41Un2suWnGzWxNjbZ")
 
@@ -28,7 +28,7 @@ fmt.Printf("  address: %v\n", pubKey.Address)
 
 #### Parse a btc private key address in wallet format
 ```go
-import btcpk "github.com/steakknife/bitcoin/addr/private"
+import btcpk "github.com/budisugianto/bitcoin/addr/private"
 
 privKey := btcpk.MustDecode("5Ju6hf57BPdusMDUg4C6gPKiauXSahHVnTGmTNHoJeGUwJHeqSY")
 
