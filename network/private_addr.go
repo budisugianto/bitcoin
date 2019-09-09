@@ -2,11 +2,12 @@ package network
 
 import (
 	"fmt"
+
 	"github.com/steakknife/bitcoin/util/inversemap"
 )
 
 var (
-	privateNetworksToPrefixes = map[Network]byte{Main: 0x80, Test: 0xEF}
+	privateNetworksToPrefixes = map[Network]byte{Main: 0x80, Test: 0xEF, Dipro: 0x5A}
 	privatePrefixesToNetworks = inversemap.InverseMap(privateNetworksToPrefixes).(map[byte]Network)
 )
 

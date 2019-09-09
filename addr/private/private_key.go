@@ -2,11 +2,11 @@ package private
 
 import (
 	"crypto/sha256"
-	"github.com/steakknife/bitcoin/addr/public"
+	"math/big"
+
 	"github.com/steakknife/bitcoin/network"
 	"github.com/steakknife/bitcoin/util/key"
 	"golang.org/x/crypto/ripemd160"
-	"math/big"
 )
 
 type PrivateKey struct {
@@ -162,7 +162,7 @@ func Decode(encoded string) (pk *PrivateKey, err error) {
 		return
 	}
 
-	network, err := network.DecodePrivateAddressPrefix(decoded[0])
+	network, err := network.DecodePrivateAddressPrefix(decoded[2]) // dipro
 	if err != nil {
 		return
 	}
