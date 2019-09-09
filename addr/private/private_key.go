@@ -4,6 +4,7 @@ import (
 	"crypto/sha256"
 	"math/big"
 
+	"github.com/budisugianto/bitcoin/addr/public"
 	"github.com/budisugianto/bitcoin/network"
 	"github.com/budisugianto/bitcoin/util/key"
 	"golang.org/x/crypto/ripemd160"
@@ -70,8 +71,8 @@ func NewFromExponent(exponent []byte) (pk *PrivateKey, err error) {
 	return NewFromNetworkAndExponent(network.Main, exponent)
 }
 
-func (pk PrivateKey) PublicKey() *public_key.PublicKey {
-	return &public_key.PublicKey{
+func (pk PrivateKey) PublicKey() *public.PublicKey {
+	return &public.PublicKey{
 		Network: pk.Network,
 		Address: pk.PublicAddress(),
 	}
@@ -162,7 +163,7 @@ func Decode(encoded string) (pk *PrivateKey, err error) {
 		return
 	}
 
-	network, err := network.DecodePrivateAddressPrefix(decoded[2]) // dipro
+	network, err := network.DecodePrivateAddressPrefix(decoded[0]) // dipro
 	if err != nil {
 		return
 	}
